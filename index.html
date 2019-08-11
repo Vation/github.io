@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vcolco</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    p{
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a href="index.html"><img src="images/logo_color.svg" alt="" class="logo"></a>
+    <ul class="nav_items show">
+      <li><a href="./product.html">产品</a></li>
+      <li><a href="./service.html">服务</a></li>
+      <li><a href="./culture.html">文化</a></li>
+      <li><a class="active" href="#">关于</a></li>
+      <li><a href="./job.html">加入网阔</a></li>
+      <li><a href="./investment.html">投资者关系</a></li>
+    </ul>
+  </header>
+  <div id="tab">
+    <div class="tabs">
+      <ul>
+        <li><a href="#">公司介绍</a></li>
+        <li><a href="#">荣誉资质</a></li>
+        <li><a href="#">新闻动态</a></li>
+        <li><a href="#">联系我们</a></li>
+      </ul>
+    </div>
+    <div class="tabCons">
+      <section>
+        <div class="pic_box">
+          <h3>公司介绍</h3>
+          <img src="images/a1.jpg" alt="">
+        </div>
+        <div style="text-align: center;">
+          <img style="width: 1140px" src="images/a2.jpg" alt="">
+         <!--  <h5>关心·力行</h5>
+          <p class="desc">成都网阔信息技术股份有限公司,成立于2005年.时至今日,网阔人一直未忘初心:为你我每一次地平安出行,并为之默默努力.近十年间,推出了运政系统,GPS管理平台,车站管理平台,安全闭环管理系统等软件,有效地提升了交通行业的安全性.</p> -->
+        </div>
+      </section>
+      <section>
+        <div class="pic_box">
+          <h3>荣誉资质</h3>
+          <img src="images/a3.jpg" alt="">
+        </div>
+      </section>
+      <section>
+        <div class="pic_box">
+          <h3>新闻动态</h3>
+          <img src="images/a4.jpg" alt="">
+        </div>
+        <div class="product_intro_box">
+          <div class="radio_box">
+            <label class="product_item_radio">
+              <input type="radio" name="item" value="1" checked/>
+              <span>网阔新闻</span>
+            </label>
+            <label class="product_item_radio">
+              <input type="radio" name="item" value="2" />
+              <span>行业动态</span>
+            </label>
+          </div>    
+        </div>
+        <img style="width: 1280px; margin:90px calc((100% - 1280px)/2)" src="images/a5.jpg" alt="">
+      </section>
+      <section>
+        <div class="pic_box">
+          <h3>联系我们</h3>
+          <img src="images/a6.jpg" alt="">
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="footer gray">
+    <p>成都网阔信息技术股份有限公司 copyright © 2005-2015</p>
+    <a href="#">ICP备案 川B2-20060049</a>
+  </div>
+</body>
+<script type="text/javascript">
+  window.onload = h_tab('tab');
+  function h_tab(tabId){
+   var oLinks = document.getElementById(tabId).getElementsByTagName("a");
+   var oCons = document.getElementById(tabId).getElementsByTagName("section");
+   for(var i = 0; i<oLinks.length; i++){
+     oLinks[i].index = i;
+     oLinks[i].onclick = function () {
+       for(var j =0; j<oLinks.length; j++){
+         oLinks[j].className="";
+         oCons[j].style.display = "none";
+       }
+       this.className="cur";
+       oCons[this.index].style.display ="block";
+     }
+
+   }
+ }
+</script>
+</html>
