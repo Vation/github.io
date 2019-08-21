@@ -1,0 +1,237 @@
+[v-cloak] { display: none; }
+
+/*一些全局样式x*/
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  outline: none !important;
+}
+html{
+  font-size: 20px;
+}
+body {
+  /*background-color: #FAFAFA;*/
+  margin: 0;
+  font-family: 'silka', 'Open Sans',-apple-system,Helvetica Neue,Helvetica,Open Sans,Arial,PingFang SC,PingFang TC,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif;
+  font-weight: 400;
+  font-size: .7rem;
+  color: #191A1E;
+  /*padding-top: 100rem;*/
+}
+p,h1,h2,h3,h4,h5,h6{
+  padding: 0;
+  margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: 600;
+}
+ul,ol{
+  margin-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  list-style: none;
+}
+li{
+  /*list-style: none;*/
+}
+a, .href{
+  text-decoration: none;
+  /*color: #43474E;*/
+  cursor: pointer;
+}
+a:hover, .href{
+  color: #667B9F;
+  text-decoration: none;
+}
+button{
+  background-color: #3B82FF;
+}
+button:hover{
+  background-color: #4D8DFC;
+}
+button:focus, input:focus, textarea:focus{
+  outline: none;
+}
+select{
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  cursor: pointer;
+}
+select::-ms-expand { display: none; }
+.button{
+  background-color: #3B82FF;
+  padding: .25rem 1.3rem;
+  font-size: .7rem;
+  color: #FFF;
+  border: none;
+  border-radius: .1rem;
+  cursor: pointer;
+}
+
+.logo{
+  /*font-size: 4.2rem;*/
+  /*color: #44474A;*/
+  color: #fff;
+  font-family: 'Silka-Bold', sans-serif;
+  line-height: 0;
+  font-size: 1rem;
+  position: fixed;
+  left: 1.5rem;
+  top: 1.5rem;
+  mix-blend-mode: difference;
+  z-index: 20;
+}
+.nav_menu{
+  position: fixed;
+  right: 0;
+  top: .6rem;
+  padding: 1rem;
+  z-index: 20;
+  mix-blend-mode: difference;
+  /*height: 3rem;*/
+}
+.nav_menu a{
+  font-weight: 500;
+  font-size: .6rem;
+  margin: 1rem;
+  color: #FFF;
+  text-transform: uppercase;
+  opacity: .7;
+}
+.nav_menu a:hover{
+  opacity: 1;
+}
+.canvas_box{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+canvas {
+  background-color: #F0F3F5;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  /*opacity: .15;*/
+}
+.start_box{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  display: none;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 12.5rem; }
+}
+@keyframes blink-caret {
+  from, to { box-shadow: 1px 0 0 0 transparent; }
+  50% { box-shadow: 1px 0 0 0; }
+}
+.start_item{
+  width: 25%;
+  height: 100%;
+  background-color: black;
+}
+.start_title{
+  width: 13.8rem;
+  font-size: 1.5rem;
+  overflow: hidden;
+  position: absolute;
+  top: calc(50vh - 5rem);
+  left: calc(50vw - 6.9rem);
+  color: #FFF;
+  animation: typing .75s steps(20, end),blink-caret .75s step-end infinite;
+}
+.start_title .spec{
+  margin: 0 1rem;
+}
+
+.intro_box{
+  height: calc(100vh - 6rem);
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.skills_bg{
+  width: 100%;
+}
+.skills_box, .works_box{
+  position: relative;
+}
+.works_box{
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  width: 60rem;
+  margin: 0 auto 8rem;
+  height: 28rem;
+  position: relative;
+}
+.work_cover{
+  position: absolute;
+  width: 60rem;
+  z-index: -1;
+}
+.works_box h5{
+  font-size: 1rem;
+  font-weight: 500;
+  padding-top: 3rem;
+}
+.works_item{
+  background-color: #E0E3E4;
+  flex: 1;
+  height: 16rem;
+}
+/*.works_box:before{
+  content: '';
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  background-color: #F0F3F5;
+  left: calc(50% - 3rem);
+  top: -3rem;
+}*/
+.bg_overflow{
+  background-color: rgba(37,42,56,.78);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.intro_contents small{
+  color: #A9BBC9;
+  padding-top: 4rem;
+  display: inline-block;
+}
+.intro_title{
+  text-align: center;
+  font-size: 2.5rem;
+  
+}
+.intro_title span{
+  color: #A58860;
+}
+.goto_work{
+  display: inline-block;
+  padding: 1.1rem 2.4rem;
+  border-radius: 3rem;
+  background-color: #191A1E;
+  color: #FFF;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 2.5rem auto 10rem;
+}

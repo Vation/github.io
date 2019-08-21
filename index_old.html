@@ -21,17 +21,24 @@
   <!-- <link rel="stylesheet" href="<%= Setting.jscdn %>/element-ui@2.9.1/lib/theme-chalk/index.css">  -->
   </head>
 <body>
-  <div class="canvas_box">
-    <canvas id="canvas"></canvas>
-  </div>
-  <a href="" class="logo">
-    <img src="public/images/logo.svg" alt="">
-  </a>
-  <div class="nav_menu">
-    <a class="nav_work" href="">Works</a>
-    <a class="nav_skill" href="">Skills</a>
-    <a class="nav_exp" href="">Experiences</a>
-  </div>
+  <header>
+    <div class="nav_bar">
+      <a href="" class="logo">
+        <img src="public/images/logo.svg" alt="">
+      </a>
+      <ul class="nav_menu">
+        <li>
+          <a class="nav_work" href="">Works</a>
+        </li>
+        <li>
+          <a class="nav_skill" href="">Skills</a>
+        </li>
+        <li>
+          <a class="nav_exp" href="">Experiences</a>
+        </li>
+      </ul>
+    </div>
+  </header>
   <div class="start_box">
     <h3 class="start_title"><span class="title_1">Product</span><span class="spec">&</span><span class="title_2">Design</span></h3>
     <div class="start_item"></div>
@@ -40,7 +47,9 @@
     <div class="start_item"></div>
     <div class="start_item"></div>
   </div>
-  <div class="intro_box">
+  <div class="page_container">
+    <div class="intro_box">
+     <canvas id="canvas"></canvas>
      <div class="intro_contents">
       <small>PRODUCT   DESIGNER</small>
       <h4 class="intro_title">
@@ -49,14 +58,12 @@
       <a href="" class="goto_work">My works</a>
      </div>
    </div>
-   <div class="works_box">
-      <h5>Recent work</h5>
-      <img src="public/images/work_bg.jpg" alt="" class="work_cover">
-   </div>
+   <div class="works_box"></div>
    <div class="skills_box">
     <div class="bg_overflow"></div>
     <img src="public/images/skills_bg.jpg" alt="" class="skills_bg">
   </div>
+</div>
 </body>
 <script src="public/canvas.js"></script>
 <script type="text/javascript">
