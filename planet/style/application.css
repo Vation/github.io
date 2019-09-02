@@ -478,6 +478,9 @@ img{
 .planet_type_item a{
   color: #202020;
 }
+.planet_type_item .planet_info{
+  width: 72%;
+}
 .planet_type_item .planet_info h4{
   margin: 0;
   font-size: 20px;
@@ -501,6 +504,9 @@ img{
 }
 .planet_sponsor{
   text-align: right;
+}
+.planet_sponsor ul{
+  position: relative;
 }
 .planet_sponsor ul li{
   float: right;
@@ -613,6 +619,7 @@ img{
   justify-content:center;
   flex-wrap: wrap;
   padding: 40px 0;
+  width: 340px;
 }
 .info_card.sponsor a ul li img{
   width: 36px;

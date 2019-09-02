@@ -72,14 +72,14 @@ select::-ms-expand { display: none; }
 .logo{
   /*font-size: 4.2rem;*/
   /*color: #44474A;*/
-  color: #fff;
+  /*color: #fff;*/
   font-family: 'Silka-Bold', sans-serif;
   line-height: 0;
   font-size: 1rem;
   position: fixed;
   left: 1.5rem;
   top: 1.5rem;
-  mix-blend-mode: difference;
+  /*mix-blend-mode: difference;*/
   z-index: 20;
 }
 .nav_menu{
@@ -98,10 +98,9 @@ select::-ms-expand { display: none; }
   /*color: #FFF;*/
   color: #191A1E;
   text-transform: uppercase;
-  opacity: .7;
 }
 .nav_menu a:hover{
-  opacity: 1;
+  opacity: .7;
 }
 .canvas_box{
   position: fixed;
@@ -492,8 +491,8 @@ footer{
 footer p, footer a{
   display: inline-block;
   color: #191A1E;
-  margin: 0 .5rem;
-  margin-top: 7rem;
+  margin: 0 .1rem;
+  margin-top: 8rem;
   font-size: .8rem;
   position: relative;
   z-index: 2;
