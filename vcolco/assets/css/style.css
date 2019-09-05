@@ -184,14 +184,14 @@ input:focus{
   justify-content: center;
   position: relative;
 }
-.banner_info p{
-  font-family: ZGJHBZZ--GBK;
+.banner_info img{
+  /*font-family: ZGJHBZZ--GBK;
   font-size: 50px;
   color: #FFF;
   text-shadow: 0 2px 18px rgba(0,0,0,0.30);
   /*opacity: .9;*/
   position: relative;
-  bottom: 80px;
+  bottom: 50px;
 }
 .slider_box{
   position: absolute;
