@@ -374,6 +374,7 @@ a:focus{
 }
 
 .dashboard{
+  width: 100%;
   display: flex;
 }
 
@@ -430,7 +431,6 @@ a:focus{
 .dashboard_nav{
   width: 256px;
   margin: 40px 0;
-  float: left;
 }
 .dashboard_nav .menu-item{
   height: 42px;
@@ -462,8 +462,7 @@ a:focus{
 }
 .dashboard_content_box{
   margin: 40px 0;
-  width: calc(100vw - 257px);
-  float: right;
+  flex: 1;
   border-left: solid 1px #E7E7EB;
 }
 .dashboard_content{

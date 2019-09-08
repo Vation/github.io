@@ -118,111 +118,111 @@
               </div>
               <el-pagination background layout="total, prev, pager, next, jumper" @current-change="getValleys" :current-page.sync="currentPage" :total="totalCount"></el-pagination>
             </div>
-            <el-dialog class="rent_dialog house" title="修改小区信息" :visible.sync="editValleyDialogVisible">
-              <div class="house_content" v-loading="dialogLoading">
-                <table class="form_table">
-                  <thead>
-                    <tr>
-                      <th width="110"></th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><label>地址</label></td>
-                      <td>
-                        <el-input v-model="editValley.location" placeholder=""></el-input>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><label>小区名称</label></td>
-                      <td>
-                        <el-input v-model="editValley.title" placeholder=""></el-input>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><label>物业联系方式</label></td>
-                      <td>
-                        <el-input v-model="editValley.contact" placeholder=""></el-input>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><label>周边配套</label></td>
-                      <td>
-                        <el-input type="textarea" :rows="2" placeholder="请输入周边配套信息" v-model="editValley.surrounding" class="big_input"></el-input>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><label>小区简介</label></td>
-                      <td>
-                        <el-input type="textarea" :rows="2" placeholder="请输入小区简介" v-model="editValley.description" class="big_input"></el-input>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table> 
-              </div>
-              <div slot="footer" class="dialog-footer">
-                <el-button class="" type="" @click="editValleyDialogVisible = false" :disabled="dialogLoading">关闭</el-button>
-                <el-button class="submit_btn" type="primary" @click="updateValley" :disabled="dialogLoading">提交修改</el-button>
-              </div>
-            </el-dialog>
-            <el-dialog class="rent_dialog house" title="录入新小区" :visible.sync="newValleyDialogVisible">
-              <div class="house_content" v-loading="dialogLoading">
-                <table class="form_table">
-                  <thead>
-                    <tr>
-                      <th width="110"></th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><label>省市区</label></td>
-                      <td>
-                        <el-cascader size="large" :options="regionData" :props="{value: 'label'}" v-model="newValley.region" placeholder="省市区" style="width: 100%;"></el-cascader>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><label>地址</label></td>
-                      <td>
-                        <el-input v-model="newValley.location" placeholder=""></el-input>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><label>小区名称</label></td>
-                      <td>
-                        <el-input v-model="newValley.title" placeholder=""></el-input>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><label>物业联系方式</label></td>
-                      <td>
-                        <el-input v-model="newValley.contact" placeholder=""></el-input>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><label>周边配套</label></td>
-                      <td>
-                        <el-input type="textarea" :rows="2" placeholder="请输入周边配套信息" v-model="newValley.surrounding" class="big_input"></el-input>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><label>小区简介</label></td>
-                      <td>
-                        <el-input type="textarea" :rows="2" placeholder="请输入小区简介" v-model="newValley.description" class="big_input"></el-input>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table> 
-              </div>
-              <div slot="footer" class="dialog-footer">
-                <el-button class="" type="" @click="cleanForm" :disabled="dialogLoading">清空</el-button>
-                <el-button class="submit_btn" type="primary" @click="createValley" :disabled="dialogLoading">提交</el-button>
-              </div>
-            </el-dialog>
           </div>
         </div>
       </div>
+      <el-dialog class="rent_dialog house" title="修改小区信息" :visible.sync="editValleyDialogVisible">
+        <div class="house_content" v-loading="dialogLoading">
+          <table class="form_table">
+            <thead>
+              <tr>
+                <th width="110"></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label>地址</label></td>
+                <td>
+                  <el-input value="南山路 15 号" placeholder=""></el-input>
+                </td>
+              </tr>
+              <tr>
+                <td><label>小区名称</label></td>
+                <td>
+                  <el-input value="南山小区" placeholder=""></el-input>
+                </td>
+              </tr>
+              <tr>
+                <td><label>物业联系方式</label></td>
+                <td>
+                  <el-input value="82565602" placeholder=""></el-input>
+                </td>
+              </tr>
+              <tr>
+                <td><label>周边配套</label></td>
+                <td>
+                  <el-input type="textarea" :rows="2" placeholder="请输入周边配套信息" v-model="editValley.surrounding" class="big_input"></el-input>
+                </td>
+              </tr>
+              <tr>
+                <td><label>小区简介</label></td>
+                <td>
+                  <el-input type="textarea" :rows="2" placeholder="请输入小区简介" v-model="editValley.description" class="big_input"></el-input>
+                </td>
+              </tr>
+            </tbody>
+          </table> 
+        </div>
+        <div slot="footer" class="dialog-footer">
+          <el-button class="" type="" @click="editValleyDialogVisible = false" :disabled="dialogLoading">关闭</el-button>
+          <el-button class="submit_btn" type="primary" @click="updateValley" :disabled="dialogLoading">提交修改</el-button>
+        </div>
+      </el-dialog>
+      <el-dialog class="rent_dialog house" title="录入新小区" :visible.sync="newValleyDialogVisible">
+        <div class="house_content" v-loading="dialogLoading">
+          <table class="form_table">
+            <thead>
+              <tr>
+                <th width="110"></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label>省市区</label></td>
+                <td>
+                  <el-cascader size="large" :options="regionData" :props="{value: 'label'}" v-model="newValley.region" placeholder="省市区" style="width: 100%;"></el-cascader>
+                </td>
+              </tr>
+              <tr>
+                <td><label>地址</label></td>
+                <td>
+                  <el-input v-model="newValley.location" placeholder=""></el-input>
+                </td>
+              </tr>
+              <tr>
+                <td><label>小区名称</label></td>
+                <td>
+                  <el-input v-model="newValley.title" placeholder=""></el-input>
+                </td>
+              </tr>
+              <tr>
+                <td><label>物业联系方式</label></td>
+                <td>
+                  <el-input v-model="newValley.contact" placeholder=""></el-input>
+                </td>
+              </tr>
+              <tr>
+                <td><label>周边配套</label></td>
+                <td>
+                  <el-input type="textarea" :rows="2" placeholder="请输入周边配套信息" v-model="newValley.surrounding" class="big_input"></el-input>
+                </td>
+              </tr>
+              <tr>
+                <td><label>小区简介</label></td>
+                <td>
+                  <el-input type="textarea" :rows="2" placeholder="请输入小区简介" v-model="newValley.description" class="big_input"></el-input>
+                </td>
+              </tr>
+            </tbody>
+          </table> 
+        </div>
+        <div slot="footer" class="dialog-footer">
+          <el-button class="" type="" @click="cleanForm" :disabled="dialogLoading">清空</el-button>
+          <el-button class="submit_btn" type="primary" @click="createValley" :disabled="dialogLoading">提交</el-button>
+        </div>
+      </el-dialog>
     </div>
   </main>
   <!-- <button onclick="topFunction()" id="gotop" title="Go to top"></button> -->

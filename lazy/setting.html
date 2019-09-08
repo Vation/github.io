@@ -76,7 +76,7 @@
                       </el-radio-group>
                     </el-form-item>
                     <el-form-item>
-                      <el-button type="primary" @click="submitInfo()">保存</el-button>
+                      <el-button type="primary" @click="">保存</el-button>
                     </el-form-item>
                   </el-form>
                 </el-tab-pane>
@@ -91,13 +91,13 @@
                         <input id="code" name="code"  type="text" placeholder="短信验证码">
                         
                        <!--  <countdown :auto-start="false" ref="countdown" > -->
-                        <button type="button" class="text_btn" @click.prevent="sendSmsCode" :disabled="countdownSeconds > 0" :class="{ 'pure-button-disabled': countdownSeconds > 0 }" >
-                          <span class="loading" v-if="countdownSeconds > 0">{{countdownSeconds}}s 后重新获取</span><label>获取验证码</label>
+                        <button type="button" class="text_btn" @click.prevent="" :disabled="countdownSeconds > 0" :class="{ 'pure-button-disabled': countdownSeconds > 0 }" >
+                          <label>获取验证码</label>
                         </button>
                       </div>
                     </el-form-item>
                     <el-form-item>
-                      <el-button type="primary" @click="submitPhone()">保存</el-button>
+                      <el-button type="primary" @click="">保存</el-button>
                     </el-form-item>
                   </el-form>
                 </el-tab-pane>
@@ -135,7 +135,7 @@
       data: {
         currentMenu: 'me',
         activeName: 'info',
-        nickname: "<%= current_user.nickname %>",
+        nickname: "业主",
         sex: 0,
         phone: "",
         code: "",
