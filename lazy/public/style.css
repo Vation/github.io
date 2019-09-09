@@ -116,9 +116,9 @@ input{
 input:hover{
   border-color: #B0B0B0;
 }
-input:focus{
+/*input:focus{
   border-color: #4D70FF;
-}
+}*/
 .menu-link:hover{
   background-color: #EFF1F3;
 }
@@ -939,7 +939,7 @@ a:focus{
   border: none;
 }
 .new_house_btn:hover{
-  background-color: #19dc8c;
+  background-color: #0ccc7e;
 }
 
 .house_form_item{
