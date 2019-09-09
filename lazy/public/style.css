@@ -1491,3 +1491,6 @@ a:focus{
 .sex_item .el-form-item__content{
   margin-left: 0 !important;
 }
+.hidden_time{
+  display: none;
+}
