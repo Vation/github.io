@@ -191,7 +191,7 @@ header.index_header{
 .company_item{
   background-color: #FCFCFC;
   width: 330px;
-  height: 330px;
+  /*height: 330px;*/
   border-radius: 3px;
   text-align: center;
   color: #37404D;
@@ -581,7 +581,7 @@ header.index_header{
   align-items: center;
   color: rgba(255,255,255,.7);
   margin-right: 200px;
-  width: 172px;
+  width: 180px;
   margin-bottom: 20px;
 }
 .com_intro i{
